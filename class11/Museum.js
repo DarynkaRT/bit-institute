@@ -1,6 +1,6 @@
 class Museum{
     constructor()
-this.pieces = [];
+    this.pieces = [];
 }
 getPieces(){
     return this.pieces
