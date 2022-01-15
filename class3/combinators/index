@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" IE=edge">
+    <meta name="viewport" content="width=,initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>elemento 1</h1>
+        <h1>elemento 2</h1>
+        <h1>elemento 3</h1>
+    </div>
+</body>
+<style>
+    div {
+        background-color: red;
+        height: 200px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+</style>
+</html>

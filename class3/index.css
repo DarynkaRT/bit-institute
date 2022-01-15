@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: aquamarine;
+    margin: 0;
+}
+
+ul{
+    text-decoration: none;
+}
+li{
+    display: inline;
+}
+
+.login{
+    background-color: red;
+    display: inline;
+}
+.login h3{
+    display: inline;
+    
+}
