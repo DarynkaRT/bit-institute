@@ -7,5 +7,6 @@ getPieces(){
 }
 setPieces (pieces ){
 }
-initializeGallery(){}
+initializeGallery(){
+    let piece1 = new pieces(".\class11.jpg.","Fachada Museo del Oro, Santa Marta Magdalena" )
 
