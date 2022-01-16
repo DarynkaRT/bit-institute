@@ -1,0 +1,37 @@
+.header{
+    justify-content: center;display: flex;background:black
+}
+
+.containerMenu{
+    background-color: rgba(230, 197, 10, 0.973);
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contenido{
+    padding: 25px;
+    background-color: black;
+    color: white;
+}
+
+.text{
+    text-align: center;
+}
+
+.contenidoColumn{
+    display: flex; 
+    width: 100%;
+}
+.col{
+    color: black;
+    width: 33%;
+    padding: 20px;
+    border: 1px solid white;
+    background: lightyellow;
+}
+.titulo{
+    color: #E55F0D
+}

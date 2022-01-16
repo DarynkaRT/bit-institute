@@ -9,7 +9,7 @@ class Teacher extends person{
      title,
      salary,
      classes,
-     prefix){ }
+     prefix
      ){
      super(
     firsName,

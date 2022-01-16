@@ -1,7 +1,12 @@
-class Student extends person{
+class Student extends Person{
     constructor(){
-        super();
-        this.grade = "";
-        this.classes = "";
-        this. = 0;
-        this.classes =[];
+      super();
+      this.grade = "";
+      this.classes = {
+        math: 0,
+        language: 0,
+        sciences: 0
+      };
+      this.studyType = "";
+    }
+  };

@@ -1,0 +1,174 @@
+.header{
+    justify-content: center;display: flex;background:black
+}
+
+.container{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around
+}
+
+.containerMenu{
+    background-color: rgba(230, 197, 10, 0.973);
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contenido{
+    padding: 25px;
+    background-color: black;
+    color: white;
+}
+.textInuyasha{
+    text-align: justify
+}
+.text{
+    text-align: center;
+}
+
+.contenidoColumn{
+    justify-content: center;
+    display: flex; 
+    width: 100%;
+}
+.column{
+    color: black;
+    width: 33%;
+    padding: 20px;
+    border: 1px solid white;
+    background: lightyellow;
+}
+
+.header{
+    text-align:center
+}
+
+.header-title{
+    color: white;
+}
+
+.containerCharacter{
+    width: 500px; 
+    text-align: center;
+    display: none;
+}
+
+.containerText{
+    width: 500px;
+}
+
+.containerCharacter{
+    color: black;
+    border: 1px solid white;
+    background: lightyellow;
+}
+.titulo{
+    color: #E55F0D
+}
+
+
+.flip-box {
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    background-color: transparent;
+    width: 300px;
+    height: 360px;
+  }
+  
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+
+
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+  }
+  
+  .flip-box-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .flip-box-back {
+    display: block;
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .spanMessage{
+    display: inline-block;
+    margin: 15px 25px 0px 25px;
+  }
+
+  .button{
+    height: 50px;
+    width: 150px;
+  }
+
+
+  
+.flip-box2 {
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    background-color: transparent;
+    width: 300px;
+    height: 360px;
+  }
+  
+  .flip-box-inner2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-box2:hover .flip-box-inner2 {
+    transform: rotateX(180deg);
+  }
+
+
+  .flip-box-front2, .flip-box-back2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+  }
+  
+  .flip-box-front2 {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .flip-box-back2 {
+    display: block;
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateX(180deg);
+    justify-content: center;
+    align-items: center;
+  }
+  
