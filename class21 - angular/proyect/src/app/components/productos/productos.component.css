@@ -1,0 +1,12 @@
+.icon-pepe {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.fa-pencil:hover {
+    color: #00c400;
+}
+
+.fa-trash:hover {
+    color: #ca0000;
+}

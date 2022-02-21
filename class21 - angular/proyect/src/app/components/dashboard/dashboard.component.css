@@ -1,0 +1,32 @@
+ul {
+    width: 100%;
+}
+
+li {
+    list-style: none;
+    transform: translateX(-21px);
+    text-align: center;
+    transition: all .7s;
+    cursor: pointer;
+}
+
+button,
+h3,
+i {
+    color: #fff;
+}
+
+button {
+    width: 100%;
+}
+
+li:hover,
+button:hover {
+    background-color: #fff;
+    color: var(--color-negro);
+}
+
+.dh-pepe {
+    background-color: var(--color-negro);
+    min-height: 100vh;
+}

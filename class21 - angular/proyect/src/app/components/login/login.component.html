@@ -1,0 +1,31 @@
+<section class="container-fluid d-flex justify-content-center align-items-center login-container">
+    <div class="login-page">
+        <div class="login-form p-5">
+            <!-- <app-slider></app-slider> -->
+            <form [formGroup]="loginForm" (ngSubmit)="accesoUsuario()">
+                <div class="mb-3">
+                    <input type="email" formControlName="usuario" class="form-control login-input" placeholder="Ingrese su correo">
+                    <p class="fw-bold text-danger w-100 text-center pt-2" *ngIf="loginForm.get('usuario')?.hasError('required') && loginForm.get('usuario')?.touched">
+                        El correo es obligatorio
+                    </p>
+                    <p class="fw-bold text-danger w-100 text-center pt-2" *ngIf="loginForm.get('usuario')?.hasError('pattern')">
+                        El correo no es valido
+                    </p>
+                </div>
+                <div class="mb-3">
+                    <input type="password" formControlName="pass" class="form-control login-input" placeholder="Ingrese su contraseña">
+                    <p class="fw-bold text-danger w-100 text-center pt-2" *ngIf="loginForm.get('pass')?.hasError('required') && loginForm.get('pass')?.touched">
+                        La contraseña es requerida
+                    </p>
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="login-buton" type="submit" [disabled]="loginForm.invalid">
+                        <span>INGRESAR</span>
+                        <div class="liquid"></div>
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</section>
