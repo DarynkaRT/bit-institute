@@ -1,0 +1,60 @@
+<div class="contenidoRegistro">
+    <div class="row">
+        <div class="col-12">
+            <app-navbar [titulo_navbar]='this.titulo_formulario'></app-navbar>
+        </div>
+    </div>
+    <!-- <h1>{{ titulo_formulario | uppercase}}</h1> -->
+    <form class="row g-3" style="margin-top: 25px;" [formGroup]="usuarioForm" (ngSubmit)="crearUsuario()">
+        <div class="col-md-6">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" formControlName="nombre" class="form-control">
+            <p class="fw-bold text-danger" *ngIf="usuarioForm.get('nombre')?.hasError('required') && usuarioForm.get('nombre')?.touched">Se necesita el nombre</p>
+        </div>
+        <div class="col-md-3">
+            <label for="primer_apellido" class="form-label">Primer Apellido</label>
+            <input type="text" formControlName="primer_apellido" class="form-control">
+            <p class="fw-bold text-danger" *ngIf="usuarioForm.get('primer_apellido')?.hasError('required') && usuarioForm.get('nombre')?.touched">Se necesita el primer apellido </p>
+        </div>
+        <div class="col-md-3">
+            <label for="segundo_apellido" class="form-label">Segundo Apellido</label>
+            <input type="text" formControlName="segundo_apellido" class="form-control">
+            <p class="fw-bold text-danger" *ngIf="usuarioForm.get('segundo_apellido')?.hasError('required') && usuarioForm.get('nombre')?.touched">Se necesita el segundo apellido</p>
+        </div>
+        <div class="col-md-4">
+            <label for="precioProducto" class="form-label">Genero</label>
+            <select class="form-control" formControlName="genero" id="genero">
+                <option *ngFor="let genero of genero; let i = index" [value]="genero.id">
+                  {{genero.name}}
+                </option>
+            </select>
+        </div>
+        <div class="col-4">
+            <label for="cedula" class="form-label">Cedula</label>
+            <input type="number" formControlName="cedula" class="form-control">
+            <p class="fw-bold text-danger" *ngIf="usuarioForm.get('cedula')?.hasError('required') && usuarioForm.get('cedula')?.touched">Se necesita la cedula del usuario</p>
+            <p class="fw-bold text-danger" *ngIf="usuarioForm.get('cedula')?.hasError('pattern')">La cedula no es valido, debe de ser un numero</p>
+        </div>
+        <div class="col-4">
+            <label for="edad" class="form-label">Edad</label>
+            <input type="number" formControlName="edad" class="form-control">
+            <p class="fw-bold text-danger" *ngIf="usuarioForm.get('edad')?.hasError('required') && usuarioForm.get('edad')?.touched">Se necesita la edad del usuario</p>
+            <p class="fw-bold text-danger" *ngIf="usuarioForm.get('edad')?.hasError('pattern')">La edad no es valida, debe de ser un numero</p>
+        </div>
+
+        <div class="col-6">
+            <label for="correo" class="form-label">Correo</label>
+            <input type="text" formControlName="correo" class="form-control">
+            <p class="fw-bold text-danger" *ngIf="usuarioForm.get('correo')?.hasError('required') && usuarioForm.get('correo')?.touched">Se necesita el correo del usuario</p>
+            <p class="fw-bold text-danger" *ngIf="usuarioForm.get('correo')?.hasError('pattern')">El correo no es valido</p>
+        </div>
+
+        <div class="col-6">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" formControlName="password" class="form-control">
+            <p class="fw-bold text-danger" *ngIf="usuarioForm.get('password')?.hasError('required') && usuarioForm.get('password')?.touched">Se necesita la contraseña del usuario</p>
+        </div>
+        
+        <button type="submit" class="btn btn-dark">Registrar</button>
+    </form>
+</div>
