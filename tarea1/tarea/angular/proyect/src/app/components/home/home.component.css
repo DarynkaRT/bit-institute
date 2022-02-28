@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap');
+.titulo-nuevo {
+    font-family: 'Syne Tactile', cursive;
+    text-align: center;
+}
+
+.row {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+/* 
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+} */
+.textInuyasha{
+    text-align: justify
+}
+.text{
+    text-align: center;
+}
+
+.contenidoColumn{
+    justify-content: center;
+    display: flex; 
+    width: 100%;
+}
+.column{
+    color: black;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid white;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.header{
+    text-align:center
+}
+
+.header-title{
+    color: white;
+}
+
+.containerCharacter{
+    width: 500px; 
+    text-align: center;
+    display: none;
+}
+
+.containerText{
+    width: 500px;
+}
+
+.containerCharacter{
+    color: black;
+    border: 1px solid white;
+    background: lightyellow;
+}
+.titulo{
+    color: #E55F0D
+}
+
+
+.flip-box {
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    background-color: transparent;
+    width: 300px;
+    height: 360px;
+  }
+  
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+
+
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+  }
+  
+  .flip-box-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .flip-box-back {
+    display: block;
+    background-color: dodgerblue;
+    color: black;
+    transform: rotateY(180deg);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .spanMessage{
+    display: inline-block;
+    margin: 15px 25px 0px 25px;
+  }
+
+  .button{
+    height: 50px;
+    width: 150px;
+  }
+
+
+  
+.flip-box2 {
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    background-color: transparent;
+    width: 300px;
+    height: 360px;
+  }
+  
+  .flip-box-inner2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-box2:hover .flip-box-inner2 {
+    transform: rotateX(180deg);
+  }
+
+
+  .flip-box-front2, .flip-box-back2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+  }
+  
+  .flip-box-front2 {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .flip-box-back2 {
+    display: block;
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateX(180deg);
+    justify-content: center;
+    align-items: center;
+  }
+  .textMenu{
+    color:  black
+  }

@@ -1,0 +1,16 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2 d-flex justify-content-around align-items-center flex-column dh-pepe">
+
+            <ul class="lista-componentes">
+                <li routerLink="/"><button class="btn fw-bold">Perfil</button></li>
+                <li (click)="en_contruccion()"><button class="btn fw-bold">Pedidos</button></li>
+                <li (click)="en_contruccion()"><button class="btn fw-bold">Seguidores</button></li>
+                <li (click)="en_contruccion()"><button class="btn fw-bold">Curiosidades</button></li>
+            </ul>
+        </div>
+        <div class="col-10">
+            <app-navbar titulo_navbar="{{ titulo_navbar }}"></app-navbar>
+        </div>
+    </div>
+</div>

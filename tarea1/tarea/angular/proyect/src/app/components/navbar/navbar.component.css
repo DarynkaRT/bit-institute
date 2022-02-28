@@ -1,0 +1,10 @@
+.negro-pepe {
+    background-color: var(--color-negro);
+    margin: 20px 20px 0 10px;
+    border-radius: 50px;
+}
+
+.navbar-pepe h4 {
+    margin-right: 75%;
+    color: #ffffff;
+}
