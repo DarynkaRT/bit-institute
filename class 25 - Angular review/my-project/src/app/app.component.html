@@ -1,0 +1,17 @@
+<!-- String interpolation {{}}-->
+<!-- <h1>{{ text }}</h1>
+<p>{{parrafo}}</p>
+<h2>{{ number + 3}}</h2> -->
+
+<!-- Data binding []-->
+<!-- <img [src]="source" alt="" >
+<img src={{source}} alt=""> -->
+<!-- <img src="https://www.w3schools.com/howto/img_avatar.png" alt=""> -->
+<!-- <img [src]="source" alt=""> -->
+
+<!-- Event binding () -->
+<!-- <p>{{ person.name }}</p>
+<button (click)="sayHello()">click me</button> -->
+<h3>{{ person.name}}</h3>
+<button (click)="changeName()">Cambiar nombre</button>
+<input type="text" [value]="person.name" (keyup)="changeNameByInput($event)" />

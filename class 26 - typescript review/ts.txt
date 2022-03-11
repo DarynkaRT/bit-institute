@@ -1,0 +1,121 @@
+Instalación de TypeScript
+
+Con el siguiente comando lo instalaremos de manera global:
+- npm install -g typescript
+
+Consultar la versión del compilador de TS:
+- tsc -v
+
+Aplicar cambios del archivo de configuración:
+- tsc
+
+Compilar de manera ‘automática’ nuestros ficheros .ts
+- tsc --watch your_file.ts / tsc -W your_file.ts
+
+CONFIGURAR EL COMPILADOR
+El archivo tsconfig. json es el que indica en un proyecto que se está trabajando con TypeScript. 
+Lo colocas en la raíz de carpetas del proyecto y en él situamos un JSON con todas las configuraciones de 
+trabajo para el transpilador de TypeScript.
+  +  Especifica la raiz de un proyecto TypeScript
+  +  Permite configurar opciones para el compilado
+
+En el siguiente enlace puedes ver para que sirve cada cosa dentro de la configuración
+tsc https://www.typescriptlang.org/tsconfig
+
+--- Generación del archivo tsconfig.json ---
+- tsc --init
+- tsc --watch //verificar cambios en tiempo real cada que hay uno
+
+Si queremos ejecutar archivos de .ts sin transpilar, podemos usar una librería que se llama ts-node
+Por ejemplo en el package.json
+
+TIPADO EN TypeScript
+#Tipado en TypeScript
+Explicito: Define una sintaxis para la creación de variables con tipo de dato
+nomVariable : Tipo de dato
+Inferido: TypeScript tiene la habilidad de deducir el tipo en funcion de un valor.
+
+#Tipo de datos primitivos
+Number > Boolean > String > Array
+Tuple > Enum > Any > Void
+Null > Undefined > Never >Object 
+
+TYPE DATE ANY
+
+  +  Usado para capturar valores dinámicos
+  +  Los valores pueden cambiar de tipo en el tiempo externo
+
+Apis externas
+Librerías de terceros
+El uso de any no es recomendable porque puede causarnos errores al momento de implementar nuestro código. 
+Se usa en casos donde se ocupe en librerías externas.
+
+TIPO VOID Y NEVER
+Tipo Void: Representa la ausencia de tipo. usado en funciones que no retornan nada.
+Tipo Never: Representa funciones que lanzan excepciones o nunca retornan un valor.
+
+La Opcion —strictNullChecks
+Para evitar errores con null or undefined utilizaremos la flag
+- tsc --watch src/main.ts --stringNullChecks
+
+Tupla
+Una tupla en TypeScript es un array de elementos que están tipados. De esta manera cada vez que haya que 
+insertar un elemento se validará que dicho elemento coincida con el tipo de dato establecido en la tupla.
+
+Enum
+Los enumerados permitan definirun conjunto de constantes con nombre, tienen la ventaja de adaptarse al
+contexto de la aplicación.
+
+Union
+Una función en Typescript puede recibir como parámetro diferentes tipos predefinidos usando Union Types
+
+  let idUser = number | string;
+  idUser = 10;
+  idUser = '10';
+
+Assertions
+Aserciones de tipos: Mecanismo de conversión de tipos de datos. Se parece al casting de tipos en otros lenguajes de programación.
+Usa dos sintaxis.
+
+  //Angle Bracket: <Type>
+  let username : any;
+  username = (<string>'danijazzero').toUpperCase()
+  ///as: variable as type
+  username = (username as string).toLowerCase()
+
+Interface
+Una interfaz (En TypeScript) es un tipo (como string, boolean, number, etc) mas “complejo”, en el cual 
+defines (como enun contrato) las propiedades y metodos que se deben cumplir de cualquier objeto que lo 
+instancie.
+La diferencia entre una interfaz y una clase es que en la interfaz solo hacemos mencion de que esperamos de 
+un objeto, en una clase mencionamos las propiedades (igual que una interfaz) pero definimos los metodos 
+(osea, especificamos que hara ese metodo, en la interfaz solo mencionamos el nombre de la funcion).
+
+METODOS GET Y SET
+TypeScript soporta los métodos accesores set y get como una forma de
+interceptar los accesos a los miembros privados de un objeto.
+Para nombrar los métodos get y set se deben dar un nombre el cual no debe
+coincidir con el nombre de propiedad a la cual accesa, por esto, se recomienda
+que los nombre de los atributos comiencen con un guión bajo.
+
+
+RUN AN FILE VIA NODE
+- node dist/main.ts
+
+RESOLVIENDO MÓDULOS
+Typescript resuelve la ubicacion de modulos observando referencias 
+relativas y no relativas.
+Posteriormente intenta localizar el modulo usando una estrategia de 
+resolucion de modulos.
+
+- tsc --moduleResolution node
+- tsc --moduleResolution classic
+
+diferencias
+node: Modulos CommonJs o UMD, mas opciones de configuración
+classic: Modulos AMD, System, ES2015, poco configurable
+
+en tsconfig.json
+
+"moduleResolution": "node|classic"
+"traceResolution":true

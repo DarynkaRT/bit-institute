@@ -1,0 +1,19 @@
+.container{
+    padding: 0;
+    display: grid;
+    border: 1px solid;
+    width: 238px
+}
+
+.sub-container{
+    display: flex;
+}
+
+.logo{
+    float: left;
+    align-self: center;
+}
+
+.info{
+    float: right;
+}
